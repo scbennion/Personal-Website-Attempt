@@ -32,6 +32,13 @@
             0% { color: #ff0000; }
             100% { color: #00ff00; }
         }
+        .continuous-bounce {
+            animation: bounce 2s infinite alternate;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
@@ -54,7 +61,7 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Write a brief introduction about yourself here.</p>
-        <img class="spinning-image" src="https://th.bing.com/th/id/OIP.PrZVVEYM9A9JKWdWAX7fcAHaM1?w=115&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Donkey from Shrek">
+        <img class="spinning-image continuous-bounce" src="https://th.bing.com/th/id/OIP.PrZVVEYM9A9JKWdWAX7fcAHaM1?w=115&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Donkey from Shrek">
     </section>
 
     <!-- Projects section -->
@@ -80,9 +87,10 @@
         <p>© 2024 Your Name</p>
     </footer>
 
-    <!-- Add JavaScript for Shrek sounds -->
+    <!-- Add JavaScript for continuous sound loop -->
     <script>
         const donkeySound = new Audio('https://pixabay.com/sound-effects/download/donkey-animals-birds-0:03.mp3');
+        donkeySound.loop = true;
         document.addEventListener('click', () => {
             donkeySound.play();
         });
