@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Your Animated Portfolio</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        /* Add more styles as needed */
+    </style>
 </head>
 <body>
     <!-- Header section -->
@@ -25,6 +41,7 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Write a brief introduction about yourself here.</p>
+        <img src="https://i.imgur.com/6qZ5XlT.png" alt="Donkey from Shrek">
     </section>
 
     <!-- Projects section -->
@@ -33,6 +50,7 @@
         <div class="project">
             <h3>Project 1</h3>
             <p>Description of your first project.</p>
+            <img src="https://i.imgur.com/6qZ5XlT.png" alt="Donkey from Shrek">
         </div>
         <!-- Add more project details as needed -->
     </section>
@@ -48,5 +66,15 @@
     <footer>
         <p>© 2024 Your Name</p>
     </footer>
+
+    <!-- Add JavaScript for animations and Shrek sounds -->
+    <script>
+        // Your animation scripts go here
+        // Play Shrek sounds when interacting with the page
+        const donkeySound = new Audio('https://example.com/donkey_sound.mp3');
+        document.addEventListener('click', () => {
+            donkeySound.play();
+        });
+    </script>
 </body>
 </html>
